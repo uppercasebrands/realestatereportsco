@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Uppercase Brands">
+
+    <link rel="icon" href="img/real_estate_reports_logo_M8I_icon.ico">
+    <title>Real Estate Reports Co.</title>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.2/axios.min.js" integrity="sha256-aXHOBRCjmgqoEhY6VBWs3Bc+E3447Iuywezt+nkgeZk=" crossorigin="anonymous" onerror="(typeof cdnfailover==='undefined')?cdnfailover={_16:true}:cdnfailover._16=true"></script><script>(typeof cdnfailover!== 'undefined')&&cdnfailover.hasOwnProperty(_16)&&document.write('<script src="js/axios/dist/axios.min.js"><\/script>');</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.js" integrity="sha256-sawP1sLkcaA4YQJQWAtjahamgG6brGmaIJWRhYwDfno=" crossorigin="anonymous" onerror="(typeof cdnfailover==='undefined')?cdnfailover={_15:true}:cdnfailover._15=true"></script><script>(typeof cdnfailover!== 'undefined')&&cdnfailover.hasOwnProperty(_15)&&document.write('<script src="js/vue/dist/vue.min.js"><\/script>');</script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" ><script>var e=document.styleSheets[document.styleSheets.length-1];if(typeof e==="undefined"||e.href!=="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"||((!e.cssRules||!e.cssRules.length)&&(!e.rules||!e.rules.length)))(function(){var e=document.createElement("link");e.rel="stylesheet",e.href="css/bootstrap3/dist/css/bootstrap.min.css",document.head.appendChild(e)})();</script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/css/ie10-viewport-bug-workaround.css" ><script>var e=document.styleSheets[document.styleSheets.length-1];if(typeof e==="undefined"||e.href!=="https://maxcdn.bootstrapcdn.com/css/ie10-viewport-bug-workaround.css"||((!e.cssRules||!e.cssRules.length)&&(!e.rules||!e.rules.length)))(function(){var e=document.createElement("link");e.rel="stylesheet",e.href="css/ie10-viewport-bug-workaround/dist/ie10-viewport-bug-workaround.css",document.head.appendChild(e)})();</script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" ><script>var e=document.styleSheets[document.styleSheets.length-1];if(typeof e==="undefined"||e.href!=="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"||((!e.cssRules||!e.cssRules.length)&&(!e.rules||!e.rules.length)))(function(){var e=document.createElement("link");e.rel="stylesheet",e.href="css/font-awesome/css/font-awesome.min.css",document.head.appendChild(e)})();</script>
+
+    <!-- Custom styles for this template  -->
+    <link href="css/main.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  </head>
+  <body>
+   <!-- 
+    <footer>
+      <div class="pull-right">
+        <a href="https://realestatereports.co"><img src="img/real_estate_reports_logo_M8I_icon.ico"></a>Real Estate Reports Co. 2017 
+      </div>
+    </footer>
+    -->
+    <div class="container-fluid nopadding">
+      <div class="row">
+        <div class="col-md-12 nopadding fullheight stable" style="">
+          <img id="logo" src="img/real-estate-reports-logo-white-310.png" class="center-block img-responsive">
+        </div>
+      </div>
+      <div id="welcome">
+      <div class="row">
+        <div class="col-xs-12 centered">
+          <div class="padding10">
+            <h2>{{ loaddata.gsx$nameofreport.$t }}</h2>
+            <h3>{{ loaddata.gsx$agentname.$t }}, {{ loaddata.gsx$agentcompany.$t }}</h3>
+            Your Report will include:
+            <ul>
+              <li v-if="loaddata.gsx$item1.$t">{{ loaddata.gsx$item1.$t }}</li>
+              <li v-if="loaddata.gsx$item2.$t">{{ loaddata.gsx$item2.$t }}</li>
+              <li v-if="loaddata.gsx$item3.$t">{{ loaddata.gsx$item3.$t }}</li>
+              <li v-if="loaddata.gsx$item4.$t">{{ loaddata.gsx$item4.$t }}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="parent">
+            <div class="wrapper centered child" id="loginsection">
+              <div>
+                <button class="loginBtn" id="loginBtn" onclick="window.loginFn();">
+                  Sign Up with Facebook
+                </button>
+              </div>
+            </div>
+            <div class="wrapper centered child" id="thankyou">
+              <div>
+                <h3>Thank you, {{ username }}!</h3>
+                Your report will arrive in your inbox shortly.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row agentrow">
+        <div class="width50">
+          <img :src="loaddata.gsx$agentimage.$t" class="img-responsive agent-image">
+        </div>
+        <div class="width50 agent-data">
+          <ul class="list-unstyled">
+            <li>{{ loaddata.gsx$agentname.$t}}</li>
+            <li>{{ loaddata.gsx$agentcompany.$t}}</li>
+              <li>{{ loaddata.gsx$agentemail.$t}}</li>
+              <li>{{ loaddata.gsx$agentphone.$t}}</li>
+              <li>{{ loaddata.gsx$agentwebsite.$t}}</li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </div>
+    <script src="js/data.min.js"></script>    
+    <!-- overlay content 
+    <div class="">
+      <button id="loading">Loading <i class="fa fa-circle-o-notch fa-spin"></i>
+      </button>
+    </div>
+     /overlay content -->
+    
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous" onerror="(typeof cdnfailover==='undefined')?cdnfailover={_10:true}:cdnfailover._10=true"></script><script>(typeof cdnfailover!== 'undefined')&&cdnfailover.hasOwnProperty(_10)&&document.write('<script src="js/jquery/dist/jquery.slim.min.js"><\/script>');</script>
+    <script src="https://maxcdn.bootstrapcdn.com/js/ie10-viewport-bug-workaround.js" onerror="(typeof cdnfailover==='undefined')?cdnfailover={_0:true}:cdnfailover._0=true"></script><script>(typeof cdnfailover!== 'undefined')&&cdnfailover.hasOwnProperty(_0)&&document.write('<script src="js/ie10-viewport-bug-workaround/dist/ie10-viewport-bug-workaround.js"><\/script>');</script>
+
+    <!-- XXXcdnfailover:bootstrap-3-min-js -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous" onerror="(typeof cdnfailover==='undefined')?cdnfailover={_11:true}:cdnfailover._11=true"></script><script>(typeof cdnfailover!== 'undefined')&&cdnfailover.hasOwnProperty(_11)&&document.write('<script src="js/jquery/dist/jquery.min.js"><\/script>');</script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>
